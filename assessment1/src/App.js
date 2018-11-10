@@ -8,7 +8,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header>blank</header>
+        <div class="sort-header"></div>
         <div class="container">
           <div class="row">
             <div class="col-md-4 col-lg-6"><Post /></div>
