@@ -1,3 +1,29 @@
+
+/*medium sizings
+ * Redefine the Bootstrap stylings such that 
+ * Bootstrap will use the README breakpoints. 
+ *  
+ *  Bootstrap standards already overlap much,
+ *  but the medium size needed editing.
+ */
+@media (max-width: 1024px) and (min-width: 641px) {
+    .col-md-12 {
+      -ms-flex: 0 0 100%;
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+
+    .col-md-4 {
+      -ms-flex: 0 0 33.333333%;
+      flex: 0 0 33.333333%;
+      max-width: 33.333333%;
+    }
+}
+
+.post-image img{
+  max-width: 100%;
+}
+
 .App {
   text-align: center;
 }
