@@ -10,11 +10,7 @@ Draft component stack:
             - other data, blah
 
 TODO:
-    Just added in the PostsView item, which will manage and list our items in the appropriate layout. 
-    NEED TO: pass in variable or get the proper "posts" and make them look right programattically.
-
-
-    PostsView should have an array of all the posts data (likely a JSON from the API later)
-    It should pass individual post data items into each Post
-
-    Therefore, each needs to take some props
+    Implemented passing of props to the PostsView and then subsequently passing to Post
+    Now, need to allow for dynamic sized arrays (like the API will require in part 2) as
+     well as cycling through the array in PostsView to set certain ones (1st and 6th of each set)
+     to be emphasized
