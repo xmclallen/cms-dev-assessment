@@ -8,3 +8,13 @@ Draft component stack:
             - image
             - title
             - other data, blah
+
+TODO:
+    Just added in the PostsView item, which will manage and list our items in the appropriate layout. 
+    NEED TO: pass in variable or get the proper "posts" and make them look right programattically.
+
+
+    PostsView should have an array of all the posts data (likely a JSON from the API later)
+    It should pass individual post data items into each Post
+
+    Therefore, each needs to take some props

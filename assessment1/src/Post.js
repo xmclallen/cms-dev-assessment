@@ -5,7 +5,7 @@ class Post extends Component {
         return (
             <React.Fragment>
                 <div className="post-image">
-                <img src="http://via.placeholder.com/500"></img>
+                <img src={this.props.imgurl}></img>
                 </div>
                 <div className="post-body">
                     <p className="post-title">Lorem Ipsum Dolor Sit Amet</p>
