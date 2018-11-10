@@ -11,7 +11,7 @@ class App extends Component {
       <div className="App">
         <div class="container">
           <div class="sort-header"></div>
-          <PostsView {...PostItems}/>
+          <PostsView posts={PostItems}/>
         </div>
       </div>
     );
