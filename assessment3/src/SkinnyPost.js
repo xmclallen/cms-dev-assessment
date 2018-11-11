@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-import Post, {ImgAndFallback, PostBody}from './Post.js'
+import Post, {ImgAndFallback, PostBody} from './Post.js'
 
 class SkinnyPost extends Component {
     render() {
@@ -8,7 +8,7 @@ class SkinnyPost extends Component {
             <React.Fragment>
                 {/*only show the skinny post on large*/}
                 <div class="d-none d-lg-block col-lg-6">
-                <div class="row">
+                <div class="row h-100">
                     <div className="col-6 post-image-skinny">
                         <ImgAndFallback mediaurl={this.props.data.mediaurl}/>
                     </div>
