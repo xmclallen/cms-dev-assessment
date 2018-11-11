@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-import Post from './Post.js'
+import Post, {ImgAndFallback, PostBody}from './Post.js'
 
 class SkinnyPost extends Component {
     render() {
@@ -10,11 +10,10 @@ class SkinnyPost extends Component {
                 <div class="d-none d-lg-block col-lg-6">
                 <div class="row">
                     <div className="col-6 post-image-skinny">
-                    <img src={this.props.data.mediaurl}></img>
+                        <ImgAndFallback mediaurl={this.props.data.mediaurl}/>
                     </div>
                     <div className="col-6 post-body-skinny">
-                        <p className="post-title">{this.props.data.title}</p>
-                        <p>{this.props.data.description}</p>
+                        <PostBody {...this.props.data} />
                     </div>
                 </div>
                 </div>
