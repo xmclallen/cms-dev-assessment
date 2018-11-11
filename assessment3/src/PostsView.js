@@ -4,8 +4,23 @@ import Post from './Post.js';
 import SkinnyPost from './SkinnyPost.js'
 
 class PostsView extends Component {
+  constructor(){
+    super();
+    this.state = {
+      posts: ''
+    };
+
+  }
   render() {
-    let p_items=this.props.posts;
+    //Make a fetch request -- defaults to GET
+    let listingsURL = "https://sv-reqres.now.sh/api/listings?per_page=9";
+    fetch(listingsURL)
+      .then( response => response.json()) //handle the data/response
+      .then( returned => this.setState(this.state.posts = returned.data) ) //and do something with it
+      .catch( error => console.error('ERROR: ', error));
+  
+
+    let p_items=this.state.posts;
     let display_posts = [];
 
     let i = 0;
