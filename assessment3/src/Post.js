@@ -4,7 +4,7 @@ class Post extends Component {
     render() {
         return (
             <React.Fragment>
-                <div className="h-100 w-100">
+            <div className="h-100 w-100 post-col">
                 <div className="post-image h-50">
                     <ImgAndFallback mediaurl={this.props.data.mediaurl}/>
                 </div>
@@ -15,7 +15,7 @@ class Post extends Component {
                   * available in the Component as broken-up.*/}
                      <PostBody {...this.props.data}/>
                 </div>
-                </div>
+            </div>
             </React.Fragment>
         );
     }
@@ -33,7 +33,7 @@ export class ImgAndFallback extends React.Component{
      // actually work instead of hoping. 
     
     render(){
-        return <img onError={erEv => erEv.target.src="fallback2.jpg"} src={this.props.mediaurl}></img>
+        return <img onError={erEv => erEv.target.src="fallback.jpg"} src={this.props.mediaurl}></img>
     }
 }
 

@@ -9,10 +9,10 @@ class SkinnyPost extends Component {
                 {/*only show the skinny post on large*/}
                 <div class="d-none d-lg-block col-lg-6">
                 <div class="row h-100">
-                    <div className="col-6 post-image-skinny">
+                    <div className="col-6 post-image-skinny post-col">
                         <ImgAndFallback mediaurl={this.props.data.mediaurl}/>
                     </div>
-                    <div className="col-6 post-body-skinny">
+                    <div className="col-6 post-body-skinny post-col">
                         <PostBody {...this.props.data} />
                     </div>
                 </div>

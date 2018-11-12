@@ -21,7 +21,7 @@ class PostsView extends Component {
     } else if ("Offers" == filter){
       listingsURL = "https://sv-reqres.now.sh/api/offers?per_page=9";
     }
-    
+
     fetch(listingsURL)
       .then( response => response.json()) //handle the data/response
       .then( returned => this.setState(this.state.posts = returned.data) ) //and do something with it
