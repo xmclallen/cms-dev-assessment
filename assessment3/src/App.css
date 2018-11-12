@@ -47,7 +47,7 @@ button{
   background:linear-gradient(transparent 75%, white);
 }
 
-.post-body{
+.post-body {
   height: 220px;
 }
 
@@ -57,6 +57,17 @@ button{
 
 .post-title{
   font-weight: 900;
+}
+
+.hover-button{
+  display: none;
+}
+.post-body:hover .hover-button, .post-body-skinny:hover .hover-button{
+  display: inline;
+  position: absolute;
+  top: 400px;
+  left: 30%;
+  width: 35%;
 }
 
 .sort-header{

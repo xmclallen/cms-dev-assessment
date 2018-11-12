@@ -48,6 +48,7 @@ export class PostBody extends React.Component{
             <React.Fragment>
                 <p className="post-title">{this.props.title}</p>
                 <p>{this.props.description}</p>  
+                <button className="hover-button">Read More</button>
             </React.Fragment>
         );
     }
