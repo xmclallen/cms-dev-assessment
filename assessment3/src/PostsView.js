@@ -16,14 +16,19 @@ class PostsView extends Component {
     var listingsURL = "";
     if("All" == filter || "Listings" == filter){
       listingsURL = "https://sv-reqres.now.sh/api/listings?per_page=9";
-    } else {
-      listingsURL = "";
+    } else if ("Events" == filter){
+      listingsURL = "https://sv-reqres.now.sh/api/events?per_page=9";
+    } else if ("Offers" == filter){
+      listingsURL = "https://sv-reqres.now.sh/api/offers?per_page=9";
     }
-    //Make a fetch request -- defaults to GET
-   // let listingsURL = "https://sv-reqres.now.sh/api/listings?per_page=9";
+    
     fetch(listingsURL)
       .then( response => response.json()) //handle the data/response
       .then( returned => this.setState(this.state.posts = returned.data) ) //and do something with it
+      /*NOTE: because these will load asynchronously, the initial load of the page will pull in nothing
+       and the array will be empty. Therefore, in order to get that to change, we use state, which will
+       automatically re-render the list of posts. */
+       
       .catch( error => console.error('ERROR: ', error));
   
 
