@@ -11,7 +11,7 @@ class App extends Component {
   constructor(){
     super()
     this.state = {
-      filter: ''
+      filter: 'All'
     }
   }
 
@@ -20,7 +20,7 @@ class App extends Component {
     return (
       <div className="App">
         <div class="container">
-          <SortHeader />
+          <SortHeader filter={this.state.filter}/>
           <PostsView filter={this.state.filter}/>
         </div>
       </div>

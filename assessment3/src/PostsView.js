@@ -12,8 +12,15 @@ class PostsView extends Component {
 
   }
   render() {
+    let filter = this.props.filter;
+    var listingsURL = "";
+    if("All" == filter || "Listings" == filter){
+      listingsURL = "https://sv-reqres.now.sh/api/listings?per_page=9";
+    } else {
+      listingsURL = "";
+    }
     //Make a fetch request -- defaults to GET
-    let listingsURL = "https://sv-reqres.now.sh/api/listings?per_page=9";
+   // let listingsURL = "https://sv-reqres.now.sh/api/listings?per_page=9";
     fetch(listingsURL)
       .then( response => response.json()) //handle the data/response
       .then( returned => this.setState(this.state.posts = returned.data) ) //and do something with it
