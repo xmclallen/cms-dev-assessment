@@ -14,6 +14,7 @@ class PostsView extends Component {
   render() {
     let filter = this.props.filter;
     var listingsURL = "";
+    //For now, just make one call to the listings api instead of multiple apis
     if("All" == filter || "Listings" == filter){
       listingsURL = "https://sv-reqres.now.sh/api/listings?per_page=9";
     } else if ("Events" == filter){
