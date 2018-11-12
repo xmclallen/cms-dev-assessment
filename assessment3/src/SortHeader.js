@@ -4,15 +4,7 @@ class SortHeader extends Component {
     
     
     buttonClicked(str){
-        if("All" == str){
-            console.log(str);
-        } else if ("Listings" == str){
-            console.log(str);
-        } else if ("Events" == str){
-
-        } else if ("Offers" == str){
-
-        }
+        this.props.onFilterChange(str);
     }
 
     render(){
